@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel = stylesheet href = "https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script>
+   $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+
+  </script>
+    <style>
+    .button {
+  background-color: orange; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button1 {border-radius: 12px;}
+.button2 {border-radius: 12px;}
+
+th{
+background-color:#20305E;
+color:white;
+}
+
+</style>
+
+
+</head>
+<body style="background-image:url('/static/images/Chatbot.png')" norepeat>
+<nav class="navbar navbar-inverse" style="padding:0px;margin:0px;background-color:#20305E;color:white;>
+  <div class="container-fluid" style="padding:0px;margin:0px">
+    <div class="navbar-header" style="margin-bottom:4px;margin-right:4px;">
+        <a class="navbar-brand" href="#"><span style="font-size:40px;color:Red"><i style="font-family:cursive">C</i></span><span style="font-size:20px;color:white">hat</span><span style="font-size:45px;color:Red"><i style="font-family:cursive">B</i></span><span style="font-size:20px;color:white">ot</span></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{ url_for('home') }}" style = "color : white"><span class="glyphicon glyphicon-home" style="padding:4px ; color : white"></span>Home</a></li>
+
+        <li><a href="{{ url_for('about') }}" style = "color : white"><span class="glyphicon glyphicon-book" style="padding:4px ; color : white"></span>About</a></li>
+
+        <li><a href="{{ url_for('contact') }}" style = "color : white"><span class="glyphicon glyphicon-phone" style="padding:4px ; color : white"></span>Contact Us</a></li>
+
+    </ul>
+  </div>
+</nav>
+{% block body %}
+{% endblock %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
